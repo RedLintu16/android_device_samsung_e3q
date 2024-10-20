@@ -201,8 +201,6 @@ sg.ko
 spi-msm-geni.ko
 spmi-pmic-arb-debug.ko
 smsc.ko
-smsc75xx.ko
-smsc95xx.ko
 msm_sharedmem.ko
 phy-generic.ko
 phy-qcom-emu.ko
@@ -286,7 +284,6 @@ sec_qc_hw_param.ko
 sec_qc_rst_exinfo.ko
 sec_reboot_cmd.ko
 sec_rdx_bootdev.ko
-hdm.ko
 sec_panel_notifier_v2.ko
 pmic_class.ko
 usb_typec_manager.ko
@@ -373,7 +370,6 @@ adsp_factory_module.ko
 snd-usb-audio-qmi.ko
 snd-soc-cirrus-amp.ko
 snd-soc-cs35l43-i2c.ko
-snd-soc-cs35l45-i2c.ko
 snd-soc-hdmi-codec.ko
 snd-soc-wm-adsp.ko
 snd-soc-cs40l26.ko

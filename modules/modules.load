@@ -166,7 +166,6 @@ sec_qc_hw_param.ko
 sec_qc_rst_exinfo.ko
 sec_reboot_cmd.ko
 sec_rdx_bootdev.ko
-hdm.ko
 sec_panel_notifier_v2.ko
 pmic_class.ko
 usb_typec_manager.ko
