@@ -31,6 +31,7 @@ Changes from Qualcomm Innovation Center are provided under the following license
 Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
 SPDX-License-Identifier: BSD-3-Clause-Clear.
 -->
+
 <compatibility-matrix version="7.0" type="framework">
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.scve.panorama</name>
@@ -479,7 +480,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1-15</version>
+        <version>1-16</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -559,7 +560,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.qtiradioconfig</name>
-        <version>1-4</version>
+        <version>1-6</version>
         <interface>
             <name>IQtiRadioConfig</name>
             <instance>default</instance>
@@ -980,7 +981,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         </interface>
     </hal>
     <!-- Codec2 HAl service -->
-    <!--hal format="hidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.media.c2</name>
         <version>1.0</version>
         <version>1.2</version>
@@ -989,7 +990,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
             <instance>default</instance>
             <instance>software</instance>
         </interface>
-    </hal-->
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.allocator</name>
         <version>1.0</version>
@@ -997,6 +998,14 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         <version>4.0</version>
         <interface>
             <name>IQtiAllocator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.graphics.allocator</name>
+        <version>1</version>
+        <interface>
+            <name>IAllocator</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -1022,14 +1031,14 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
         </interface>
     </hal>
     <!-- QSPM-HAL hidl service-->
-    <!--<hal format="hidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>vendor.qti.qspmhal</name>
         <version>1.0</version>
         <interface>
             <name>IQspmhal</name>
             <instance>default</instance>
         </interface>
-    </hal>-->
+    </hal>
     <!-- QSPM-HAL aidl service-->
     <hal format="aidl" optional="true">
         <name>vendor.qti.qspmhal</name>
@@ -1359,7 +1368,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear.
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.ListenSoundModel</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.0-2</version>
         <interface>
             <name>IListenSoundModel</name>
             <instance>default</instance>

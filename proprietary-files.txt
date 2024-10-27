@@ -759,7 +759,6 @@ vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so
 vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
 
 # DRM
-vendor/apex/com.google.android.widevine.nonupdatable.apex
 vendor/bin/hw/android.hardware.drm-service.clearkey
 vendor/etc/init/android.hardware.drm-service.clearkey.rc
 vendor/lib64/mediacas/libclearkeycasplugin.so
@@ -1170,7 +1169,7 @@ vendor/bin/hw/android.hardware.security.keymint-service
 vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
 vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service.rc
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml
+#vendor/etc/vintf/manifest/android.hardware.security.keymint-service-spu-qti.xml
 vendor/lib64/libcppbor_external.so
 vendor/lib64/libhermes_cred.so
 vendor/lib64/libkeymaster4_1support.so
@@ -1312,9 +1311,6 @@ vendor/bin/hostapd_cli
 vendor/bin/wpa_cli
 vendor/etc/init/android.hardware.wifi-service.rc
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/vintf/manifest/android.hardware.wifi-service.xml
-vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
-vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/libpasn.so
@@ -1600,7 +1596,6 @@ vendor/etc/init/init.audio.samsung.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.fingerprint.rc
 vendor/etc/init/init.nfc.samsung.rc
-vendor/etc/init/init.qccvendor.rc
 vendor/etc/init/init.qlm-service.rc
 vendor/etc/init/init.qti.fm.rc
 vendor/etc/init/init.qti.media.rc
@@ -1846,17 +1841,13 @@ vendor/etc/vintf/manifest/face-default-sec.xml
 vendor/etc/vintf/manifest/hyper-default-sec.xml
 vendor/etc/vintf/manifest/iweaver_aidl_v2_manifest.xml
 vendor/etc/vintf/manifest/khdm-default-sec.xml
-vendor/etc/vintf/manifest/lights-default-sec.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
 vendor/etc/vintf/manifest/memtrack_qti.xml
 vendor/etc/vintf/manifest/mpos-default-sec.xml
-vendor/etc/vintf/manifest/mppserver.xml
-vendor/etc/vintf/manifest/nfc-service-nxp.xml
 vendor/etc/vintf/manifest/power-samsung.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_2.xml
-vendor/etc/vintf/manifest/secure_element-service-nxp.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
@@ -1867,13 +1858,11 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.authfw-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.camera.provider-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.frcmc-service.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.health-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.qcom.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.engmode-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.fkeymaster-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hdcp.keyprovisioning-default.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hdcp.wifidisplay-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hermes.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.rtts-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.sem@1.0-manifest.xml
@@ -1882,8 +1871,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.security.vaultkeeper-manifest.
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.widevine.keyprov-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.wsm.service-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_34.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.snap-default.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.sysinput-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.ddar-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.iccc@1.0-manifest.xml
@@ -1927,7 +1914,6 @@ vendor/etc/libuwb-countrycode.conf
 vendor/etc/libuwb-feature.conf
 vendor/etc/libuwb-nxp.conf
 vendor/etc/libuwb-uci.conf
-vendor/etc/linker.config.pb
 vendor/etc/mem_logger_config.xml
 vendor/etc/mercury.json
 vendor/etc/mercury_hv.json
