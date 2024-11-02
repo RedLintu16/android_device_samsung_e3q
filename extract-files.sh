@@ -64,22 +64,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib/libsample1.so)
+	vendor/bin/hw/android.hardware.security.keymint-service|vendor/lib64/libskeymint10device.so|vendor/lib64/libskeymint_cli.so)
             [ "$2" = "" ] && return 0
-            sed -i 's|/data/misc/sample1|/data/misc/sample2|g' "${2}"
-            ;;
-        vendor/lib64/libsample2.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --remove-needed "libsample3.so" "${2}"
-            "${PATCHELF}" --add-needed "libsample4.so" "${2}"
-            ;;
-        vendor/lib/libsample5.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "libsample6.so" "libsample7.so" "${2}"
-            ;;
-        vendor/lib/libsample7.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --set-soname "libsample7.so" "${2}"
+            grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
+            ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"
+            #${PATCHELF} --replace-needed libcppbor_external.so libcppbor.so "${2}"
             ;;
         *)
             return 1

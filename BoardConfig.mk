@@ -12,11 +12,13 @@ DEVICE_PATH := device/samsung/e3q
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := 
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := kryo300
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := e3q
 
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
@@ -28,7 +30,6 @@ BOARD_RAMDISK_USE_LZ4 := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := pineapple
-TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY := 450
@@ -194,13 +195,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # Security patch level
 VENDOR_SECURITY_PATCH := 2024-10-01
 
-# Sepolicy
-#include device/qcom/sepolicy_vndr/SEPolicy.mk
-#include device/lineage/sepolicy/libperfmgr/sepolicy.mk
-#BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-#SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-#SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
@@ -230,19 +224,15 @@ BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
-    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.samsung.xml \
+    $(DEVICE_PATH)/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml \
-    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
-DEVICE_MATRIX_FILE := \
-    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml \
-    hardware/qcom-caf/common/compatibility_matrix.xml
-DEVICE_MANIFEST_SKUS := pineapple
-DEVICE_MANIFEST_PINEAPPLE_FILES := \
-    $(DEVICE_PATH)/configs/vintf/manifest_pineapple.xml \
-    $(DEVICE_PATH)/configs/vintf/manifest_samsung.xml
+    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
+# DEVICE_FRAMEWORK_MANIFEST_FILE
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := \
+    $(DEVICE_PATH)/vintf/manifest.xml
+
 
 # Inherit the proprietary files
 include vendor/samsung/e3q/BoardConfigVendor.mk
