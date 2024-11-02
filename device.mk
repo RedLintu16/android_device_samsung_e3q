@@ -35,9 +35,14 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
+    android.hardware.security.sharedsecret-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V2-ndk.vendor \
     android.hardware.weaver-V2-ndk.vendor
 
