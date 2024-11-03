@@ -19,6 +19,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
+
 # API levels
 BOARD_SHIPPING_API_LEVEL := 34
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
@@ -35,6 +39,16 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper-V1-ndk.vendor \
+    libgatekeeper.vendor
+
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport.vendor \
+    libhwbinder.vendor
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
@@ -44,7 +58,12 @@ PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
     android.hardware.security.sharedsecret-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V2-ndk.vendor \
+    android.hardware.weaver@1.0.vendor \
     android.hardware.weaver-V2-ndk.vendor
+
+# Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -61,7 +80,13 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjsoncpp.vendor
+    libcurl.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor
+
+# RIL
+PRODUCT_PACKAGES += \
+    libnetutils.vendor
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -130,6 +155,15 @@ PRODUCT_SOONG_NAMESPACES += \
     kernel/samsung/sm8650 \
     kernel/samsung/sm8650-modules
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0.vendor
+
+# Trusted UI
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0.vendor \
+    vendor.qti.hardware.systemhelper@1.0.vendor
+
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
@@ -141,6 +175,12 @@ PRODUCT_COPY_FILES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libcrypto-v33
+
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlanmdsp.otaupdate_symlink \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)
