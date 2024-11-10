@@ -27,6 +27,12 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 BOARD_SHIPPING_API_LEVEL := 34
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
+# Audio
+PRODUCT_PACKAGES += \
+    libagmmixer
+
+# Bluetooth
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
@@ -86,7 +92,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    libnetutils.vendor
+    libnetutils.vendor \
+    libsecril-client
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -176,7 +183,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcrypto-v33
 
-# WiFi firmware symlinks
+# Wi-Fi
 PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
     firmware_wlan_mac.bin_symlink \
