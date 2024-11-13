@@ -32,8 +32,8 @@ namespace_imports = [
     'hardware/qcom-caf/sm8650/data-ipa-cfg-mgr',
     'vendor/qcom/opensource/dataservices',
     'hardware/qcom-caf/wlan',
-    'packages/apps/FMRadio/jni/fmr',
-    'frameworks/native/libs/vibrator',
+    #'packages/apps/FMRadio/jni/fmr',
+    #'frameworks/native/libs/vibrator',
 ]
 
 
