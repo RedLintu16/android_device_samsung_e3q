@@ -40,6 +40,20 @@ TARGET_SCREEN_WIDTH := 1440
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    init.qti.display_boot.rc \
+    init.qti.display_boot.sh \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.composer-service.rc \
+    vendor.qti.hardware.display.composer-service.xml \
+    vendor.qti.hardware.display.demura-service
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
@@ -47,6 +61,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor \
     android.hardware.gatekeeper-V1-ndk.vendor \
     libgatekeeper.vendor
 
@@ -61,11 +76,7 @@ PRODUCT_PACKAGES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml \
-    android.hardware.security.sharedsecret-V1-ndk.vendor \
-    android.hardware.security.sharedsecret-V2-ndk.vendor \
-    android.hardware.weaver@1.0.vendor \
-    android.hardware.weaver-V2-ndk.vendor
+    android.hardware.hardware_keystore.xml
 
 # Media
 PRODUCT_PACKAGES += \
@@ -113,8 +124,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.display_boot.sh \
     init.qti.kernel.debug-cliffs.sh \
     init.qti.kernel.debug-pineapple.sh \
     init.qti.kernel.debug.sh \
@@ -137,7 +146,6 @@ PRODUCT_PACKAGES += \
     init.e3q.rc \
     init.qcom.factory.rc \
     init.qcom.rc \
-    init.qcom.usb.rc \
     init.qti.kernel.rc \
     init.qti.ss-ramdump.sh \
     init.qti.ufs.rc \
@@ -170,6 +178,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor \
     vendor.qti.hardware.systemhelper@1.0.vendor
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.qti \
+    android.hardware.usb.gadget-service.qti \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml
 
 # Vendor service manager
 PRODUCT_PACKAGES += \

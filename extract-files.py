@@ -58,9 +58,10 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/vendor.qti.hardware.display.composer-service', 'vendor/lib64/vendor.qti.hardware.display.composer3-V1-ndk.so'): blob_fixup()
         .replace_needed('android.hardware.graphics.composer3-V2-ndk.so', 'android.hardware.graphics.composer3-V3-ndk.so')
         .replace_needed('vendor.qti.hardware.display.config-V8-ndk.so', 'vendor.qti.hardware.display.config-V11-ndk.so'),
-    ('vendor/lib64/rfs/dsp/libSnpeHtpV75Skel.so', 'vendor/lib64/rfs/dsp/snap/libQnnHtpV75Skel.so'): blob_fixup()
-        .replace_needed('libc++.so.1', 'libc++.so')
-        .replace_needed('libc++abi.so.1', 'libc++abi.so.1'),
+    ('vendor/lib64/libskeymint_cli.so', 'vendor/bin/hw/android.hardware.security.keymint-service'): blob_fixup()
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so')
+        .replace_needed('libcppbor_external.so', 'libcppbor.so')
+        .add_needed('android.hardware.security.rkp-V3-ndk.so')
 }  # fmt: skip
 
 module = ExtractUtilsModule(
