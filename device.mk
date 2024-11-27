@@ -70,14 +70,6 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
-
-# Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml
-
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor
