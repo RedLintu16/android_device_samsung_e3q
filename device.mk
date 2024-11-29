@@ -59,8 +59,17 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
+    android.hardware.bluetooth.audio-V3-ndk.vendor \
+    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
+
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -222,6 +231,13 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     secril_config_svc
 
+# The default value of this variable is false and should only be set to true when
+# the device allows users to retain eSIM profiles after factory reset of user data.
+PRODUCT_PRODUCT_PROPERTIES += \
+    masterclear.allow_retain_esim_profiles_after_fdr=true
+
+
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
     hardware/interfaces/security/keymint/aidl/default/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
@@ -326,7 +342,11 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
     libsqlite.vendor \
-    FrameworksResTarget
+    FrameworksResTarget \
+    ConnectivityOverlay \
+    SoftapOverlayWpa3 \
+    TetheringOverlay_Gsi \
+    TetheringOverlay 
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -334,7 +354,13 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant-V1-ndk.vendor \
     android.hardware.wifi.supplicant-V2-ndk.vendor \
     android.hardware.wifi-V1-ndk.vendor \
-    android.hardware.wifi.hostapd-V1-ndk.vendor
+    android.hardware.wifi.hostapd-V1-ndk.vendor \
+    hostapd \
+    libwpa_client \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
@@ -344,9 +370,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlanmdsp.otaupdate_symlink \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink
+
 # WiFi Display
 PRODUCT_PACKAGES += \
-    android.media.audio.common.types-V2-cpp \
+    android.media.audio.common.types-V3-cpp \
     libnl \
     libpng.vendor \
     libwfdaac_vendor
