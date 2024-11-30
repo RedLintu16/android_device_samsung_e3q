@@ -1,5 +1,13 @@
 # Unpinned blobs from e3qxxx-user 14 UP1A.231005.007 S928BXXS4AXJB release-keys
 
+# ADSP
+vendor/bin/adsprpcd
+vendor/bin/loadalgo
+vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libloadalgo_stub.so
+
 # Audio
 vendor/lib64/hw/audio.primary.pineapple.so
 vendor/lib64/libPeripheralStateUtils.so
@@ -52,6 +60,30 @@ vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
 
+# CDSP
+vendor/bin/cdsprpcd
+vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libcdsprpc.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libsdsprpc.so
+
+# CNE
+vendor/lib64/libshsc.so
+
+# Configstore
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
+vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+
+# Connection Security
+vendor/bin/qwesd
+vendor/bin/ssgtzd
+vendor/etc/init/qwesd.rc
+vendor/etc/init/ssgtzd.rc
+vendor/etc/seccomp_policy/qwesd@2.0.policy
+vendor/etc/ssg/tz_whitelist.json
+
 # CVP
 system_ext/lib64/vendor.qti.hardware.cvp@1.0.so
 
@@ -79,12 +111,43 @@ vendor/firmware/evass.b19
 vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
 
+# Data
+vendor/bin/ATFWD-daemon
+vendor/bin/adpl
+vendor/bin/qti
+vendor/bin/shsusrd
+vendor/etc/data/dsi_config.xml
+vendor/etc/data/netmgr_config.xml
+vendor/etc/init/dataadpl.rc
+vendor/etc/init/dataqti.rc
+vendor/etc/init/init.embmssl_server.rc
+vendor/etc/init/shsusrd.rc
+vendor/etc/seccomp_policy/atfwd@2.0.policy
+vendor/lib64/libconfigdb.so
+vendor/lib64/libdsi_netctrl.so
+vendor/lib64/libdsutils.so
+vendor/lib64/libmdmdetect.so
+vendor/lib64/libnicm.so
+vendor/lib64/libnicm_dsi.so
+vendor/lib64/libnicm_utils.so
+vendor/lib64/libqcmaputils.so
+vendor/lib64/libqdi.so
+vendor/lib64/libqdp.so
+vendor/lib64/libxml.so
+vendor/lib64/vendor.qti.hardware.radio.atfwd-V1-ndk.so
+
 # Diag
 vendor/lib64/libdiag.so
 
 # Display
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
+vendor/bin/qdcmss
 vendor/etc/clstc_config_library.xml
+vendor/etc/display/DPU10__.xml
+vendor/etc/display/DPU9__.xml
+vendor/etc/display/advanced_sf_offsets.xml
+vendor/etc/display/qdcm_calib_data_E3_S6E3HAF_AMB679FN01.json
+vendor/etc/display/thermallevel_to_fps.xml
+vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -102,17 +165,17 @@ vendor/lib64/libdrmutils.so
 vendor/lib64/libgame_enhance.so
 vendor/lib64/libgpu_tonemapper.so
 vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libhdradaptivecustom.so
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
-vendor/lib64/libhistogram.so
 vendor/lib64/libintervmipc.so
 vendor/lib64/libmemutils.so
+vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libops.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
+vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libqrtrclient.so
 vendor/lib64/libqseed3.so
 vendor/lib64/libqservice.so
@@ -159,6 +222,12 @@ vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_cmd_mode_dsi_visionox_p
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_video_mode_dsi_visionox_panel_with_DSC.json
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.json
 vendor/etc/display/thermallevel_to_fps.xml
+
+# DSP
+vendor/bin/dspservice
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # DPM
 system_ext/etc/dpm/dpm.conf
@@ -355,16 +424,24 @@ vendor/lib64/libprotobuf-cpp-lite-21.7.so
 # QSEECOM
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libdrmtime.so
 vendor/lib64/libqisl.so
 vendor/lib64/libspl.so
 
 # QMI
+vendor/lib64/libidl.so
+vendor/lib64/libqmi.so
 vendor/lib64/libqmi_cci.so
+vendor/lib64/libqmi_client_helper.so
+vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
+vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
+vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 
 # RIL
+vendor/lib64/libqdpr.so
 vendor/lib64/libsec_semRil.so
 vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor
 

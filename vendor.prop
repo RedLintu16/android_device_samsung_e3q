@@ -95,14 +95,14 @@ camera.disable_zsl_mode=1
 persist.vendor.cne.feature=0
 
 # Display
-debug.egl.hw=0
+debug.egl.hw=1
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_adpf_cpu_hint=true
 debug.sf.enable_advanced_sf_phase_offset=0
 debug.sf.enable_gl_backpressure=1
 debug.sf.gpu_freq_index=7
-debug.sf.hw=0
+debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
