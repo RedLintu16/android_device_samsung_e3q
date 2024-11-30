@@ -236,8 +236,8 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 # DEVICE_FRAMEWORK_MANIFEST_FILE
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := \
-    $(DEVICE_PATH)/vintf/manifest.xml
-
+    $(DEVICE_PATH)/vintf/manifest.xml \
+    $(DEVICE_PATH)/vintf/manifest_pineapple.xml \
 
 # Inherit the proprietary files
 include vendor/samsung/e3q/BoardConfigVendor.mk
