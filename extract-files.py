@@ -55,7 +55,8 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    ('vendor/lib64/libspukeymintdeviceutils.so', 'vendor/lib64/libspukeymint.so', 'vendor/lib64/libhermes.so',  'vendor/lib64/libspukeymintutils.so', 'vendor/lib64/libskeymint10device.so', 'vendor/lib64/liblbs_core.so', 'vendor/lib64/liboemcrypto.so', 'vendor/lib64/libpuresoftkeymasterdevice.so', 'vendor/lib64/libpal_net_if.so', 'vendor/lib64/libsfp_sensor.so', 'vendor/lib64/libkeymaster_portable.so', 'vendor/lib64/mediacas/libclearkeycasplugin.so', 'vendor/lib64/libqcc_sdk.so', 'vendor/lib64/libdk_vnd_service_core.so', 'vendor/lib64/libtlpd_crypto.so', 'vendor/lib64/libsec-ril.so', 'vendor/lib64/libcppbor_external.so', 'vendor/lib64/libucm_tlc_tz_esecomm.so', 'vendor/lib64/libqms.so', 'vendor/lib64/libskeymint_cli.so', 'vendor/lib64/libengmode15.so', 'vendor/lib64/libkeymaster4_1support.so', 'vendor/lib64/libizat_core.so', 'vendor/lib64/libspcom.so', 'vendor/lib64/libFaceService.so', 'vendor/lib64/uwb_uci.hal.so', 'vendor/lib64/libnicm_utils.so', 'vendor/lib64/mediadrm/libdrmclearkeyplugin.so', 'vendor/lib64/libkeymaster4support.so', 'vendor/lib64/libsdmextension.so'): blob_fixup()
+    ('vendor/bin/hw/android.hardware.security.keymint-service-spu-qti', 'vendor/bin/hw/android.hardware.security.keymint-service', 'vendor/lib64/libhyper.so', 'vendor/lib64/libspukeymintdeviceutils.so', 'vendor/lib64/hw/gatekeeper.mdfpp.so', 'vendor/lib64/libcppcose_rkp.so', 'vendor/lib64/libspukeymint.so', 'vendor/lib64/libhermes.so', 'vendor/lib64/libese-grdg.so', 'vendor/lib64/libspukeymintutils.so', 'vendor/lib64/libskeymint10device.so', 'vendor/lib64/liblbs_core.so', 'vendor/lib64/liboemcrypto.so', 'vendor/lib64/libwifi-hal-qcom.so', 'vendor/lib64/libpuresoftkeymasterdevice.so', 'vendor/lib64/libpal_net_if.so', 'vendor/lib64/libsfp_sensor.so', 'vendor/lib64/libkeystore-engine-wifi-hidl.so', 'vendor/lib64/libkeymaster_portable.so', 'vendor/lib64/mediacas/libclearkeycasplugin.so', 'vendor/lib64/libqcc_sdk.so', 'vendor/lib64/libdk_vnd_service_core.so', 'vendor/lib64/libwifi-hal.so', 'vendor/lib64/libtlpd_crypto.so', 'vendor/lib64/libsec-ril.so', 'vendor/lib64/libcppbor_external.so', 'vendor/lib64/libucm_tlc_tz_esecomm.so', 'vendor/lib64/libqms.so', 'vendor/lib64/libskeymint_cli.so', 'vendor/lib64/libengmode15.so', 'vendor/lib64/libkeymaster4_1support.so', 'vendor/lib64/libizat_core.so', 'vendor/lib64/libspcom.so', 'vendor/lib64/libFaceService.so', 'vendor/lib64/uwb_uci.hal.so', 'vendor/lib64/libnicm_utils.so', 'vendor/lib64/mediadrm/libdrmclearkeyplugin.so', 'vendor/lib64/libkeymaster4support.so', 'vendor/lib64/libsdmextension.so'
+): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
@@ -68,7 +69,7 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    check_elf=True
+    check_elf=False
 )
 
 if __name__ == '__main__':
