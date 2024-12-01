@@ -502,6 +502,7 @@ vendor/bin/qms;DISABLE_CHECKELF
 vendor/etc/init/qms.rc
 vendor/etc/init/vendor.samsung.rilchip.qcom.rc
 vendor/etc/sec_config_oem
+vendor/etc/seccomp_policy/qms.policy
 vendor/lib64/libqdpr.so
 vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
