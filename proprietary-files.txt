@@ -424,6 +424,11 @@ vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so
 # Memory
 vendor/lib64/libvmmem.so
 
+# NVM
+vendor/bin/sec_nvm
+vendor/bin/spdaemon
+vendor/etc/init/init.spdaemon.rc
+
 # PASR
 vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so
 
