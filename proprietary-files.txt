@@ -424,6 +424,10 @@ vendor/lib64/libisosechw.so
 vendor/lib64/libshctrl.so
 vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so
 
+# Hyper
+vendor/lib64/libhypervintf.so
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
+
 # Memory
 vendor/lib64/libvmmem.so
 
@@ -463,6 +467,11 @@ vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
 # PD
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
+
+# Power
+vendor/bin/hw/android.hardware.power.samsung-service
+vendor/etc/vintf/manifest/power-samsung.xml
+vendor/lib64/libSamsngPowerHal.so
 
 # Protobuf
 vendor/lib64/libprotobuf-cpp-full-21.7.so
