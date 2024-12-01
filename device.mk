@@ -29,7 +29,29 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
 # Audio
 PRODUCT_PACKAGES += \
-    libagmmixer
+    android.hardware.audio@7.1-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    audioadsprpcd \
+    libagm_compress_plugin \
+    libagm_mixer_plugin \
+    libagm_pcm_plugin \
+    libbatterylistener \
+    libfmpal \
+    libhfp_pal \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libsndcardparser \
+    libtinycompress \
+    libvolumelistener
+
+AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
 
 # Bluetooth
 
@@ -211,6 +233,13 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    hostapd \
+    libwpa_client \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    wpa_supplicant \
+    wpa_supplicant.conf \
     firmware_wlanmdsp.otaupdate_symlink \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink

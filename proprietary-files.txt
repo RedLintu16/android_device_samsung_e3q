@@ -498,9 +498,13 @@ vendor/etc/init/vendor.qti.rmt_storage.rc
 
 # RIL
 vendor/bin/irsc_util
+vendor/bin/qms;DISABLE_CHECKELF
+vendor/etc/init/qms.rc
+vendor/etc/init/vendor.samsung.rilchip.qcom.rc
 vendor/etc/sec_config_oem
 vendor/lib64/libqdpr.so
 vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
 
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.nxp
