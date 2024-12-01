@@ -289,4 +289,12 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <name>android.hardware.security.sharedsecret</name>
         <fqname>ISharedSecret/default</fqname>
     </hal>
+    <hal format="aidl" override="true">
+        <name>android.hardware.weaver</name>
+        <version>2</version>
+        <interface>
+            <name>IWeaver</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>

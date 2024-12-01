@@ -200,6 +200,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # Security patch level
 VENDOR_SECURITY_PATCH := 2024-10-01
 
+# SEPolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3

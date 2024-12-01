@@ -241,6 +241,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.qti.qcv.rc",
+    src: "etc/init.qti.qcv.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.samsung.bsp.rc",
     src: "etc/init.samsung.bsp.rc",
     sub_dir: "init/hw",

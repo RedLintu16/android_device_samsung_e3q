@@ -126,6 +126,8 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
+    init.qti.qcv.rc \
+    init.qti.qcv.sh \
     init.qti.kernel.debug-cliffs.sh \
     init.qti.kernel.debug-pineapple.sh \
     init.qti.kernel.debug.sh \
@@ -133,7 +135,6 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.early_debug.sh \
     init.qti.kernel.sh \
     init.qti.media.sh \
-    init.qti.qcv.sh \
     init.qti.time.daemon.sh \
     init.qti.write.sh \
     init.vendor.sensordebug.sh \
