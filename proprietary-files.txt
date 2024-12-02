@@ -9,8 +9,14 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
 
 # Audio
-vendor/lib64/hw/audio.primary.pineapple.so
+vendor/bin/audioadsprpcd
+vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
+vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
+vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib64/hw/sound_trigger.primary.pineapple.so
+vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
 vendor/lib64/libPeripheralStateUtils.so
+vendor/lib64/libVoiceSdk.so
 vendor/lib64/lib_SamsungRec_08020.so
 vendor/lib64/lib_lvacfs.so
 vendor/lib64/libagm.so
@@ -21,7 +27,11 @@ vendor/lib64/libar-pal.so;DISABLE_CHECKELF
 vendor/lib64/libarmemlog.so
 vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libbluetooth_audio_session_aidl_qti.so
+vendor/lib64/libbluetooth_audio_session_qti.so
+vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libfloatingfeature.so
+vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/liblx-osal.so
 vendor/lib64/librecordalive.so
@@ -29,9 +39,29 @@ vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libsecaudiolevel.so
 vendor/lib64/libsecnativefeature.so
 vendor/lib64/libspeakercalibration.so
+vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/libvui_intf.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+
+# Audio XML
+vendor/etc/audio/sku_pineapple_qssi/audio_policy_configuration.xml
+vendor/etc/audio_policy_configuration.xml
+vendor/etc/audio_policy_configuration_base.xml
+vendor/etc/audio_policy_volumes.xml
+vendor/etc/bluetooth_audio_policy_configuration.xml
+vendor/etc/bluetooth_qti_audio_policy_configuration.xml
+vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
+vendor/etc/card-defs.xml
+vendor/etc/default_volume_tables.xml
+vendor/etc/hearing_aid_audio_policy_configuration.xml
+vendor/etc/mem_logger_config.xml
+vendor/etc/r_submix_audio_policy_configuration.xml
+vendor/etc/situation_audio_policy_volumes_sec.xml
+vendor/etc/usb_audio_policy_configuration.xml
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -83,7 +113,6 @@ vendor/etc/init/qwesd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/seccomp_policy/qwesd@2.0.policy
 vendor/etc/ssg/ta_config.json
-vendor/etc/ssg/tz_whitelist.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/libtaautoload.so
 
@@ -207,7 +236,6 @@ vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_cmd_mode_dsi_visionox_panel_w
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_cmd_mode_dsi_visionox_panel_with_DSC.json
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_video_mode_dsi_visionox_panel_with_DSC.json
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.json
-vendor/etc/display/thermallevel_to_fps.xml
 
 # DSP
 vendor/bin/dspservice
@@ -389,6 +417,69 @@ vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 
+# GNSS
+vendor/bin/hw/android.hardware.gnss-aidl-service-qti
+vendor/bin/loc_launcher
+vendor/bin/lowi-server;DISABLE_CHECKELF
+vendor/bin/xtra-daemon
+vendor/etc/batching.conf
+vendor/etc/gnss_antenna_info.conf
+vendor/etc/gps.conf
+vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
+vendor/etc/init/loc-launcher.rc
+vendor/etc/init/vendor.qsap.location.rc
+vendor/etc/izat.conf
+vendor/etc/lowi.conf
+vendor/etc/sap.conf
+vendor/etc/sec_config
+vendor/etc/seccomp_policy/gnss@2.0-base.policy
+vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
+vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
+vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
+vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
+vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
+vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
+vendor/etc/xtwifi.conf
+vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
+vendor/lib64/hw/vendor.samsung.hardware.gnss-aidl-impl-sec.so
+vendor/lib64/libbatching.so
+vendor/lib64/libcdfw.so
+vendor/lib64/libcdfw_remote_api.so
+vendor/lib64/libdataitems.so
+vendor/lib64/libgeofencing.so
+vendor/lib64/libgnss.so
+vendor/lib64/libgnsspps.so
+vendor/lib64/libgps.utils.so
+vendor/lib64/libizat_client_api.so
+vendor/lib64/libizat_core.so
+vendor/lib64/liblbs_core.so
+vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_api_wds.so
+vendor/lib64/libloc_base_util.so
+vendor/lib64/libloc_core.so
+vendor/lib64/libloc_mq_client.so
+vendor/lib64/libloc_socket.so
+vendor/lib64/libloc_util.so
+vendor/lib64/liblocation_api.so
+vendor/lib64/liblocation_api_msg.so
+vendor/lib64/liblocation_client_api.so
+vendor/lib64/liblocation_integration_api.so
+vendor/lib64/liblocationservice.so
+vendor/lib64/liblocationservice_glue.so
+vendor/lib64/liblowi_client.so
+vendor/lib64/liblowi_common.so
+vendor/lib64/liblowi_wifihal.so
+vendor/lib64/libmapdata_api.so
+vendor/lib64/libpal_net_if.so
+vendor/lib64/libsemnativecarrierfeature.so
+vendor/lib64/libsynergy_loc_api.so
+vendor/lib64/libsys_info_cache.so
+vendor/lib64/libwifiobserver.so
+vendor/lib64/libxtadapter.so
+vendor/lib64/vendor.qti.gnss-V5-ndk.so
+vendor/lib64/vendor.qti.gnss-service.so
+vendor/lib64/vendor.samsung.hardware.gnss-V2-ndk_platform.so
+
 # Graphics
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
@@ -408,6 +499,12 @@ vendor/lib64/libkernelmanager.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libllvm-qgl.so
+
+# Health
+vendor/bin/hw/vendor.samsung.hardware.health-service
+vendor/etc/init/vendor.samsung.hardware.health-service.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.health-service.xml
+vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
 
 # Hermes
 vendor/bin/hermesd
@@ -464,18 +561,31 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
 
+# Peripheral manager
+vendor/bin/pm-proxy
+vendor/bin/pm-service
+vendor/lib64/libperipheral_client.so
+
 # PD
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 
-# Power
-vendor/bin/hw/android.hardware.power.samsung-service
-vendor/etc/vintf/manifest/power-samsung.xml
-vendor/lib64/libSamsngPowerHal.so
-
 # Protobuf
 vendor/lib64/libprotobuf-cpp-full-21.7.so
 vendor/lib64/libprotobuf-cpp-lite-21.7.so
+
+# QCC
+vendor/bin/qcc-vendor
+vendor/etc/init/init.qccvendor.rc
+vendor/etc/seccomp_policy/qesdk.policy
+vendor/etc/vintf/manifest/vendor.qti.qccvndhal_aidl-service.xml
+vendor/lib64/libqcc_file_agent.so
+vendor/lib64/libqcc_sdk.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.2.so
+vendor/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
+vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
 
 # QSEECOM
 vendor/lib64/libGPreqcancel.so
@@ -531,10 +641,8 @@ vendor/lib64/vendor.samsung.hardware.security.sem@1.0.so
 vendor/bin/hw/android.hardware.security.keymint-service
 vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
 vendor/bin/hw/vendor.samsung.hardware.security.skpm@1.0-service
-vendor/bin/vendor.samsung.hardware.security.fkeymaster-service
 vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
 vendor/etc/init/android.hardware.security.keymint-service.rc
-vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.skpm@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.skpm@1.0-manifest.xml
 vendor/lib64/android.hardware.keymaster-V4-ndk.so;MODULE_SUFFIX=_vendor
@@ -556,7 +664,6 @@ vendor/lib64/libspukeymint.so
 vendor/lib64/libspukeymintdeviceutils.so
 vendor/lib64/libspukeymintutils.so
 vendor/lib64/vendor.samsung.hardware.keymint-V3-ndk.so
-vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.skpm@1.0.so
 
 # SMC Invoke
@@ -571,7 +678,16 @@ vendor/lib64/libsfp_teegw.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Thermal
+vendor/bin/hw/vendor.samsung.hardware.thermal-service
+vendor/etc/btcon.json
+vendor/etc/display/thermallevel_to_fps.xml
+vendor/etc/init/vendor.samsung.hardware.thermal-default.rc
+vendor/etc/mercury.json
+vendor/etc/mercury_hv.json
+vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal-default.xml
 vendor/lib64/libthermalclient.so
+vendor/lib64/service-listener-ext-aidl-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.thermal-V1-ndk.so
 
 # Time services
 vendor/app/TimeService/TimeService.apk
