@@ -28,44 +28,38 @@ BOARD_SHIPPING_API_LEVEL := 34
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
 # Audio
-SOONG_CONFIG_NAMESPACES += android_hardware_audio
-SOONG_CONFIG_android_hardware_audio += \
-    run_64bit
-SOONG_CONFIG_android_hardware_audio_run_64bit := true
-
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
-    android.hardware.audio.common-V1-ndk.vendor \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl \
+    audioadsprpcd \
     audio.bluetooth.default \
-    audio.primary.pineapple \
     audio.r_submix.default \
     audio.usb.default \
-    audioadsprpcd \
-    libagmmixer \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
     libbatterylistener \
+    libfmpal \
+    libhfp_pal \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libsndcardparser \
     libtinycompress \
-    libvolumelistener
+    libvolumelistener \
+    sound_trigger.primary.pineapple \
+    vendor.qti.hardware.pal@1.0.vendor
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
-AUDIO_PAL_DIR := hardware/qcom-caf/sm8650/audio/pal
 
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(AUDIO_HAL_DIR)/configs/pineapple/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/audio_effects.conf \
     $(AUDIO_HAL_DIR)/configs/pineapple/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/audio_effects.xml \
     $(AUDIO_HAL_DIR)/configs/pineapple/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
-    $(AUDIO_PAL_DIR)/configs/pineapple/Hapticsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/Hapticsconfig.xml \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
@@ -146,6 +140,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcurl.vendor \
     libjsoncpp.vendor \
+    libqti_vndfwk_detect_vendor \
     libsqlite.vendor
 
 # RIL

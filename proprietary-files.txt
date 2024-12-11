@@ -2,18 +2,23 @@
 
 # ADSP
 vendor/bin/adsprpcd
+vendor/bin/audioadsprpcd
 vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
+vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
 
+# ADSP modules
+vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
+vendor/lib/rfsa/adsp/libhme_dsp_skel.so
+
 # Audio
-vendor/bin/audioadsprpcd
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
-vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
-vendor/lib64/hw/audio.bluetooth_qti.default.so
-vendor/lib64/hw/sound_trigger.primary.pineapple.so
+vendor/etc/audconf/OPEN/acdb_cal.acdb
+vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
+vendor/etc/init/init.audio.samsung.rc
+vendor/lib64/hw/audio.primary.pineapple.so
 vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/libVoiceSdk.so
@@ -27,9 +32,6 @@ vendor/lib64/libar-pal.so;DISABLE_CHECKELF
 vendor/lib64/libarmemlog.so
 vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libbluetooth_audio_session_aidl_qti.so
-vendor/lib64/libbluetooth_audio_session_qti.so
-vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
@@ -47,8 +49,27 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 
+# Audio FX modules
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libquasar.so
+vendor/lib64/soundfx/libshoebox.so
+
 # Audio XML
+vendor/etc/audio/sku_pineapple/audio_effects.conf
+vendor/etc/audio/sku_pineapple/audio_effects.xml
+vendor/etc/audio/sku_pineapple/mixer_paths.xml
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp.xml
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp_wsa883x.xml
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd.xml
+vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd_sku2.xml
+vendor/etc/audio/sku_pineapple/resourcemanager.xml
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
 vendor/etc/audio/sku_pineapple_qssi/audio_policy_configuration.xml
+vendor/etc/audio_effects.xml
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration_base.xml
 vendor/etc/audio_policy_volumes.xml
@@ -62,6 +83,39 @@ vendor/etc/mem_logger_config.xml
 vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/situation_audio_policy_volumes_sec.xml
 vendor/etc/usb_audio_policy_configuration.xml
+
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
+vendor/etc/vintf/manifest/bttpi-saidl.xml
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so
+vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so
+vendor/lib64/lib_bt_aptx.so
+vendor/lib64/lib_bt_ble.so
+vendor/lib64/lib_bt_bundle.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libsoc_helper.so
+vendor/lib64/vendor.samsung.hardware.bluetooth.audio-V2-ndk.so
+vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
+
+# Bluetooth (A2DP)
+vendor/lib64/btaudio_offload_if.so
+vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib64/libbluetooth_audio_session_aidl_qti.so
+vendor/lib64/libbluetooth_audio_session_qti.so
+vendor/lib64/libbluetooth_audio_session_qti_2_1.so
+vendor/lib64/libbt-hidlclient.so
+vendor/lib64/libsehbluetooth_audio_session_aidl.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -169,7 +223,12 @@ vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.hardware.radio.atfwd-V1-ndk.so
 
 # Diag
+vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag.rc
+vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiag.so
+vendor/lib64/libqsocket.so
+vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
 vendor/bin/qdcmss
@@ -247,7 +306,6 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 system_ext/etc/dpm/dpm.conf
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
-vendor/lib64/vendor.qti.diaghal@1.0.so
 vendor/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so
 vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
@@ -561,14 +619,15 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
 
+# PD
+vendor/bin/pd-mapper
+vendor/lib64/libpdmapper.so
+vendor/lib64/libpdnotifier.so
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
-
-# PD
-vendor/lib64/libpdmapper.so
-vendor/lib64/libpdnotifier.so
 
 # Protobuf
 vendor/lib64/libprotobuf-cpp-full-21.7.so
@@ -609,6 +668,7 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
+vendor/lib64/libqsh.so
 
 # Remoteproc
 vendor/bin/rmt_storage
@@ -671,6 +731,26 @@ vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
 
+# Sensors
+vendor/bin/init.qcom.sensors.sh
+vendor/bin/sensors.qti
+vendor/bin/sscrpcd
+vendor/etc/init/init.vendor.sensors.rc
+vendor/etc/init/vendor.sensors.qti.rc
+vendor/etc/init/vendor.sensors.sscrpcd.rc
+vendor/lib64/libnanopb.so
+vendor/lib64/libsensorslog.so
+vendor/lib64/libsns_api.so
+vendor/lib64/libsns_device_mode_stub.so
+vendor/lib64/libsns_direct_channel_stub.so
+vendor/lib64/libsns_dynamic_loader_stub.so
+vendor/lib64/libsns_registry_skel.so
+vendor/lib64/libsns_remote_proc_state_stub.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libsnsutils.so
+vendor/lib64/libssc_default_listener.so
+
 # TEE
 vendor/lib64/libGPMTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
@@ -681,6 +761,7 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 vendor/bin/hw/vendor.samsung.hardware.thermal-service
 vendor/etc/btcon.json
 vendor/etc/display/thermallevel_to_fps.xml
+vendor/etc/hqm_device.xml
 vendor/etc/init/vendor.samsung.hardware.thermal-default.rc
 vendor/etc/mercury.json
 vendor/etc/mercury_hv.json
