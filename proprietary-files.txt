@@ -83,6 +83,7 @@ vendor/etc/mem_logger_config.xml
 vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/situation_audio_policy_volumes_sec.xml
 vendor/etc/usb_audio_policy_configuration.xml
+vendor/etc/usecaseKvManager.xml
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
