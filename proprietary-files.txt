@@ -211,6 +211,7 @@ vendor/etc/init/dataqti.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/shsusrd.rc
 vendor/etc/seccomp_policy/atfwd@2.0.policy
+vendor/etc/vintf/manifest/atfwd-saidl.xml
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -319,7 +320,6 @@ vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 vendor/etc/init/vendor.samsung.hardware.security.drk-service.rc
 vendor/etc/vintf/manifest/drk_manifest.xml
 vendor/lib64/libdk_vnd_service_core.so
-vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 
@@ -583,7 +583,6 @@ vendor/bin/hw/vendor.samsung.hardware.security.hermes-service
 vendor/etc/init/hermesd.rc
 vendor/etc/init/vendor.samsung.hardware.security.hermes.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hermes.xml
-vendor/lib64/libese-grdg.so
 vendor/lib64/libhermes.so
 vendor/lib64/libhermes_bdbridge.so
 vendor/lib64/libhermes_cred.so
@@ -598,6 +597,10 @@ vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
 # Memory
 vendor/lib64/libvmmem.so
+
+# NFC
+vendor/etc/libnfc-nxp.conf
+vendor/etc/nfc/libnfc-nxp_RF.conf
 
 # NVM
 vendor/bin/sec_nvm
@@ -687,27 +690,69 @@ vendor/lib64/libqsh.so
 vendor/bin/rmt_storage
 vendor/bin/ssr_setup
 vendor/etc/init/vendor.qti.rmt_storage.rc
+vendor/etc/init/vendor.qti.smp2p.rc
 
 # RIL
+vendor/bin/hw/rild
+vendor/bin/ipacm-diag
 vendor/bin/irsc_util
+vendor/bin/ks
 vendor/bin/qms;DISABLE_CHECKELF
+vendor/bin/secril_config_svc
+vendor/etc/init/init.vendor.onebinary.rc
+vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/qms.rc
 vendor/etc/init/vendor.samsung.rilchip.qcom.rc
+vendor/etc/init/vendor.samsung.rild.rc
+vendor/etc/locale/plmn_delta_eng.bin
+vendor/etc/locale/plmn_delta_zh-rCN.bin
+vendor/etc/locale/plmn_delta_zh-rHK.bin
+vendor/etc/locale/plmn_delta_zh-rTW.bin
+vendor/etc/mtu-conf.xml
+vendor/etc/pdpcnt-conf.xml
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_se13.bin
+vendor/etc/qms_log_config
 vendor/etc/sec_config_oem
 vendor/etc/seccomp_policy/qms.policy
+vendor/etc/vintf/manifest/qms-saidl.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_34.xml
+vendor/lib64/libSemDataProps.so
+vendor/lib64/libSemTelephonyProps.so
+vendor/lib64/libengmode_client.so
 vendor/lib64/libqdpr.so
+vendor/lib64/libril_sem.so
+vendor/lib64/libsec-ril.so
+vendor/lib64/libsec_semRil.so
 vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so
+
+# RIL - UIM
+product/etc/permissions/UimService.xml
+product/framework/uimservicelibrary.jar
 
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.nxp
 vendor/bin/hw/vendor.samsung.hardware.security.sem@1.0-service
 vendor/etc/init/secure_element-service-nxp.rc
 vendor/etc/init/vendor.samsung.hardware.security.sem@1.0-service.rc
+vendor/etc/libese-nxp.conf
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.sem@1.0-manifest.xml
+vendor/lib64/libese-grdg.so
 vendor/lib64/libsec_esek.so
 vendor/lib64/libsec_semHalTlc.so
-vendor/lib64/libsec_semRil.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.samsung.hardware.security.sem@1.0.so
 
@@ -792,6 +837,9 @@ vendor/lib64/libtime_genoff.so
 
 # USB
 vendor/bin/hw/android.hardware.usb-service.qti
+
+# Ultra-wideband
+vendor/etc/libuwb-nxp.conf
 
 # Wi-Fi
 vendor/bin/cnss-daemon
