@@ -42,6 +42,7 @@ vendor/lib64/libsecaudiolevel.so
 vendor/lib64/libsecnativefeature.so
 vendor/lib64/libspeakercalibration.so
 vendor/lib64/libtensorflowlite_c.so
+vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libvui_intf.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
@@ -252,6 +253,7 @@ vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libintervmipc.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/libmemutils.so
+vendor/lib64/libmeters.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libops.so
 vendor/lib64/libqdcm-algo.so
@@ -779,3 +781,18 @@ vendor/lib64/libtime_genoff.so
 
 # USB
 vendor/bin/hw/android.hardware.usb-service.qti
+
+# Wi-Fi
+vendor/bin/cnss-daemon
+vendor/bin/cnss_diag;DISABLE_DEPS
+vendor/etc/hostapd/hostapd.accept
+vendor/etc/hostapd/hostapd.deny
+vendor/etc/hostapd/hostapd_default.conf
+vendor/etc/init/init.vendor.wlan.rc
+vendor/etc/init/wifi.rc
+vendor/etc/init/wifi_qcom.rc
+vendor/etc/wifi/indoorchannel.info
+vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
