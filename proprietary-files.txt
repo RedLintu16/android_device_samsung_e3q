@@ -342,6 +342,18 @@ vendor/lib64/libdrmfs.so
 vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
+# Fingerprint
+vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint-service
+vendor/etc/init/init.fingerprint.rc
+vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint-service.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint-service.xml
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libsfp_sensor.so
+vendor/lib64/libsynaFpSensorTestNwd.so
+vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
+
 # Firmware
 vendor/etc/secnvm/k250a_47000400_0.img
 vendor/etc/secnvm/k250a_47000403_1.img
@@ -462,9 +474,7 @@ vendor/lib64/bm4a73v08s12n62.bin
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper-service
-vendor/bin/hw/android.hardware.gatekeeper-service-spu-qti
 vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
-vendor/etc/init/android.hardware.gatekeeper-service-spu-qti.rc
 vendor/etc/init/android.hardware.gatekeeper-service.rc
 vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
 vendor/lib64/hw/gatekeeper.mdfpp.so
@@ -692,6 +702,7 @@ vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.nxp
 vendor/bin/hw/vendor.samsung.hardware.security.sem@1.0-service
+vendor/etc/init/secure_element-service-nxp.rc
 vendor/etc/init/vendor.samsung.hardware.security.sem@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.sem@1.0-manifest.xml
 vendor/lib64/libsec_esek.so
