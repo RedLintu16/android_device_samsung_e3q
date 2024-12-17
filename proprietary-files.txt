@@ -146,6 +146,11 @@ vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
 
+# CASS
+vendor/bin/cass
+vendor/etc/init/cass.rc
+vendor/lib64/libvk_cass_interface.so
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
@@ -341,6 +346,15 @@ vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+
+# Engmode
+vendor/lib64/libengmode2lite.so
+vendor/lib64/libengmode_client.so
+vendor/lib64/libengmode_server.so
+vendor/lib64/libengmode_tlc.so
+vendor/lib64/librtts_client.so
+vendor/lib64/libstork_shared.so
+vendor/lib64/vendor.samsung.hardware.security.rtts-V1-ndk.so
 
 # Fingerprint
 vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint-service
@@ -693,12 +707,14 @@ vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.smp2p.rc
 
 # RIL
+vendor/bin/emservice
 vendor/bin/hw/rild
 vendor/bin/ipacm-diag
 vendor/bin/irsc_util
 vendor/bin/ks
 vendor/bin/qms;DISABLE_CHECKELF
 vendor/bin/secril_config_svc
+vendor/etc/init/emservice.rc
 vendor/etc/init/init.vendor.onebinary.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/init/ipacm-diag.rc
@@ -724,7 +740,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_34.xml
 vendor/lib64/libSemDataProps.so
 vendor/lib64/libSemTelephonyProps.so
-vendor/lib64/libengmode_client.so
 vendor/lib64/libqdpr.so
 vendor/lib64/libril_sem.so
 vendor/lib64/libsec-ril.so
@@ -791,6 +806,7 @@ vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
 
 # Sensors
+vendor/bin/factory.ssc
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
