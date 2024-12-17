@@ -1,3 +1,10 @@
+# Fingerprint
+ro.vendor.fingerprint.type=udfps
+ro.vendor.fingerprint.sensor_location=720|2327|147
+
+# Radio
+ro.radio.noril=no
+
 # Audio
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
