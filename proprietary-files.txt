@@ -324,9 +324,7 @@ vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 
 # DRM
-vendor/lib64/libcpion.so
 vendor/lib64/liboemcrypto.so
-vendor/lib64/libtrustedapploader.so
 vendor/lib64/mediacas/libclearkeycasplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 
@@ -874,6 +872,31 @@ vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
+
+# Trusted User Interface
+vendor/bin/hw/vendor.qti.hardware.trustedui-aidl-service-qti
+vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
+vendor/bin/trusteduilistener
+vendor/etc/init/trusteduilistener.rc
+vendor/etc/init/vendor.qti.hardware.trustedui-aidl-service-qti.rc
+vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.trustedui-aidl-service.xml
+vendor/lib64/libTouchInputVM.so
+vendor/lib64/libTrustedInput.so
+vendor/lib64/libTrustedInputAIDL.so
+vendor/lib64/libTrustedInputTZ.so
+vendor/lib64/libTrustedInputUtils.so
+vendor/lib64/libTrustedUI.so
+vendor/lib64/libTrustedUIAIDL.so
+vendor/lib64/libTrustedUITZ.so
+vendor/lib64/libTrustedUIVM.so
+vendor/lib64/libcpion.so
+vendor/lib64/libsi.so
+vendor/lib64/libtrustedapploader.so
+vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 
 # USB
 vendor/bin/hw/android.hardware.usb-service.qti

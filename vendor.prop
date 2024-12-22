@@ -1,6 +1,7 @@
 # Fingerprint
 ro.vendor.fingerprint.type=udfps
 ro.vendor.fingerprint.sensor_location=720|2327|147
+ro.vendor.fingerprint.request_touch_event=true
 
 # Radio
 ro.radio.noril=no
