@@ -5,7 +5,7 @@
 #
 
 BUILD_BROKEN_DUP_RULES := true
-#BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 #BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 DEVICE_PATH := device/samsung/e3q
@@ -91,7 +91,8 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=false \
     androidboot.hypervisor.protected_vm.supported=true \
-    androidboot.selinux=permissive
+    androidboot.selinux=permissive \
+    BOARD_KERNEL_CMDLINE := printk.devkmsg=on
 
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x00000000

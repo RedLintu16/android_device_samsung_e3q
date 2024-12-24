@@ -51,7 +51,7 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libvolumelistener \
     sound_trigger.primary.pineapple \
-    vendor.qti.hardware.pal@1.0.vendor
+    vendor.qti.hardware.pal@1.0.vendor \
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
 
@@ -125,9 +125,27 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    FrameworksResCommon \
+    FrameworksResSamsung \
+    FrameworksResTarget \
+    SettingsResCommon \
+    SettingsResSamsung \
+    SystemUIResCommon \
+    TelecommResCommon \
+    TelephonyResCommon \
+    WifiResCommon \
+    WifiResTarget \
+    WifiResTarget_spf
+
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service-qti \
+    libqti-perfd-client
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -214,9 +232,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.qcom
 
-# Soong namespaces
+# Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/qcom-caf/common/libqti-perfd-client \
     hardware/samsung \
     kernel/samsung/sm8650 \
     kernel/samsung/sm8650-modules
@@ -227,7 +248,8 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
-    telephony-ext
+    telephony-ext \
+    android.hardware.radio.config-V2-ndk \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext

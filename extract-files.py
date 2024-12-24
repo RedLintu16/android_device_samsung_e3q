@@ -44,7 +44,36 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'libsecril-client'
+        'libsecril-client',
+        "com.qualcomm.qti.imscmservice@2.0.so",
+        "com.qualcomm.qti.imscmservice@2.1.so",
+        "com.qualcomm.qti.imscmservice@2.2.so",
+        "vendor.qti.ims.callcapability@1.0.so",
+        "vendor.qti.ims.callcapabilityaidlservice-V1-ndk.so",
+        "vendor.qti.ims.callinfo@1.0.so",
+        "vendor.qti.ims.configaidlservice-V1-ndk.so",
+        "vendor.qti.ims.connectionaidlservice-V1-ndk.so",
+        "vendor.qti.ims.factory@1.0.so",
+        "vendor.qti.ims.factory@1.1.so",
+        "vendor.qti.ims.rcsconfig@1.0.so",
+        "vendor.qti.ims.rcsconfig@2.0.so",
+        "vendor.qti.diaghal@1.0.so",
+        "vendor.qti.ims.rcsconfig@2.1.so",
+        "vendor.qti.ims.rcssipaidlservice-V1-ndk.so",
+        "vendor.qti.ims.rcsuceaidlservice-V1-ndk.so",
+                "vendor.qti.ims.callcapability@1.0",
+                "vendor.qti.ims.factory@1.0",
+                "vendor.qti.ims.rcsconfig@2.0",
+                "vendor.qti.ims.rcsconfig@2.1",
+        "vendor.qti.hardware.qteeconnector@1.0",
+        "tee",
+        "vendor.qti.hardware.display.config-V7-ndk",
+        "vendor.display.config@1.0",
+        "vendor.qti.hardware.display.config-V5-ndk",
+        "android.hardware.thermal@2.0",
+        "android.hardware.weaver-V2-ndk",
+        "android.hardware.weaver-V1-ndk",
+
     ): lib_fixup_vendor_suffix,
     (
         'libagmclient',
@@ -69,7 +98,11 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
+<<<<<<< Updated upstream
     check_elf=False
+=======
+    check_elf=False,
+>>>>>>> Stashed changes
 )
 
 if __name__ == '__main__':

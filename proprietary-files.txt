@@ -353,7 +353,7 @@ vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
 # Firmware
 vendor/etc/secnvm/k250a_47000400_0.img
 vendor/etc/secnvm/k250a_47000403_1.img
-vendor/etc/secnvm/k250a_47000406_f.img
+vendor/etc/secnvm/k250a_47000403_f.img
 vendor/firmware/00_generic_xtalk_shape.bin
 vendor/firmware/Data.msc
 vendor/firmware/E3_S6E3HAE_AMB681AZ01.dat
@@ -727,32 +727,24 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.samsung.hardware.security.sem@1.0.so
 
 # Security
-vendor/bin/hw/android.hardware.security.keymint-service
-vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
 vendor/bin/hw/vendor.samsung.hardware.security.skpm@1.0-service
-vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
-vendor/etc/init/android.hardware.security.keymint-service.rc
+vendor/etc/init/vendor.samsung.hardware.security.skpm@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.security.skpm@1.0-manifest.xml
 vendor/lib64/android.hardware.keymaster-V4-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/android.hardware.keymaster@3.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/android.hardware.keymaster@4.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/android.hardware.keymaster@4.1.so;MODULE_SUFFIX=_vendor
-vendor/lib64/android.hardware.security.keymint-V1-ndk.so;MODULE_SUFFIX=_vendor
-vendor/lib64/android.hardware.security.keymint-V3-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libkeymaster4_1support.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libkeymaster4support.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libkeymaster_messages.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libkeymaster_portable.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libpuresoftkeymasterdevice.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libsec_esek.so
-vendor/lib64/libsec_semHalTlc.so
-vendor/lib64/libskeymint10device.so
-vendor/lib64/libskeymint_cli.so
+vendor/lib64/libsec_skpmHalTlc.so
 vendor/lib64/libspictrl.so
-vendor/lib64/libspukeymint.so
-vendor/lib64/libspukeymintdeviceutils.so
-vendor/lib64/libspukeymintutils.so
-vendor/lib64/vendor.samsung.hardware.keymint-V3-ndk.so
-vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.security.skpm@1.0.so
+vendor/lib64/android.hardware.security.sharedsecret-V2-ndk.so
+system/lib64/android.hardware.security.rkp-V3-ndk.so
+vendor/lib64/android.hardware.security.rkp-V3-ndk.so;MODULE_SUFFIX=_vendor
 
 # SMC Invoke
 vendor/lib64/libminkdescriptor.so
@@ -819,3 +811,21 @@ vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
+
+
+system/lib64/vendor.qti.hardware.display.config-V7-ndk.so
+vendor/lib64/vendor.qti.hardware.display.config-V7-ndk.so;MODULE_SUFFIX=_vendor
+system_ext/lib64/vendor.display.config@1.0.so
+vendor/lib64/vendor.display.config@1.0.so;MODULE_SUFFIX=_vendor
+system/lib64/vendor.qti.hardware.display.config-V5-ndk.so
+vendor/lib64/vendor.qti.hardware.display.config-V5-ndk.so;MODULE_SUFFIX=_vendor
+system/lib64/android.hardware.thermal@2.0.so
+vendor/lib64/android.hardware.thermal@2.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/android.hardware.radio.config-V2-ndk.so
+system/lib64/android.hardware.bluetooth.audio-V3-ndk.so
+vendor/lib64/android.hardware.bluetooth.audio-V3-ndk.so
+system/lib64/libutilscallstack.so
+system/lib64/android.hardware.thermal-V1-ndk.so
+vendor/lib64/android.hardware.thermal-V1-ndk.so;MODULE_SUFFIX=_vendor
+system/lib64/android.hardware.weaver-V2-ndk.so
+vendor/lib64/android.hardware.weaver-V2-ndk.so;MODULE_SUFFIX=_vendor

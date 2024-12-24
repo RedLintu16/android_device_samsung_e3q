@@ -1,6 +1,6 @@
 <!--
-     Copyright (C) 2024 The Linux Foundation
-     SPDX-License-Identifier: BSD-3-Clause
+Copyright (C) 2024 The Linux Foundation
+SPDX-License-Identifier: BSD-3-Clause
 -->
 <manifest version="8.0" type="device" target-level="8">
     <hal format="aidl">
