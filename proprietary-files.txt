@@ -829,3 +829,11 @@ system/lib64/android.hardware.thermal-V1-ndk.so
 vendor/lib64/android.hardware.thermal-V1-ndk.so;MODULE_SUFFIX=_vendor
 system/lib64/android.hardware.weaver-V2-ndk.so
 vendor/lib64/android.hardware.weaver-V2-ndk.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libskeymint_cli.so
+vendor/etc/init/android.hardware.security.keymint-service-spu-qti.rc
+vendor/etc/init/android.hardware.security.keymint-service.rc
+system/etc/init/keystore2.rc
+system/lib64/libsce_v1.crypto.samsung.so
+system/lib64/libsce_v1.crypto.samsung.so
+system/lib64/libsamsung_keystore_utils.so
+system/lib64/lib_native_client.dk.samsung.so

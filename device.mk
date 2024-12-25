@@ -52,6 +52,8 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.pineapple \
     vendor.qti.hardware.pal@1.0.vendor \
+    android.hardware.audio.common-V1-ndk \
+    android.hardware.audio.common-V1-ndk.vendor
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
 
@@ -130,7 +132,6 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon \
     FrameworksResSamsung \
     FrameworksResTarget \
-    SettingsResCommon \
     SettingsResSamsung \
     SystemUIResCommon \
     TelecommResCommon \
@@ -250,6 +251,11 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext \
     android.hardware.radio.config-V2-ndk \
+    libutilscallstack \
+    libutilscallstack.vendor \
+    android.hardware.radio.data-V2-ndk \
+    android.hardware.radio.messaging-V2-ndk \
+    android.hardware.radio.messaging-V2-ndk.vendor
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
@@ -305,7 +311,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     firmware_wlanmdsp.otaupdate_symlink \
     firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    libpng \
+    libpng.vendor \
+    android.hardware.wifi.supplicant-V1-ndk \
+    android.hardware.wifi.supplicant-V1-ndk.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
@@ -314,6 +324,62 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
+# Keystore
+PRODUCT_PACKAGES += \
+android.system.keystore2-V1-ndk \
+android.system.keystore2-V3-ndk \
+libkeystore2 \
+android.hardware.security.keymint-service \
+libbinder_ndk \
+libkeystore2_aaid \
+libkeystore2_apc_compat \
+libkeystore2_crypto \
+libkm_compat_service \
+libcppbor_external \
+keystore2
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+android.hardware.bluetooth@1.0 \
+android.hardware.bluetooth@1.0.vendor \
+android.hardware.bluetooth@1.1 \
+android.hardware.bluetooth@1.1.vendor \
+android.hardware.bluetooth.audio@2.1 \
+android.hardware.bluetooth.audio@2.0 \
+android.hardware.bluetooth.audio@2.1.vendor \
+android.hardware.bluetooth.audio@2.0.vendor \
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+android.hardware.gatekeeper-V1-ndk \
+android.hardware.gatekeeper-V1-ndk.vendor \
+libgatekeeper \
+libgatekeeper.vendor
+
+# Libraries
+PRODUCT_PACKAGES += \
+libjson \
+librmnetctl \
+
+# GNSS
+PRODUCT_PACKAGES += \
+android.hardware.gnss-V3-ndk \
+android.hardware.gnss-V2-ndk \
+android.hardware.gnss-V1-ndk \
+android.hardware.gnss-V3-ndk.vendor \
+android.hardware.gnss-V2-ndk.vendor \
+android.hardware.gnss-V1-ndk.vendor \
+
+# Radio
+PRODUCT_PACKAGES += \
+android.hardware.radio.data-V2-ndk \
+android.hardware.radio.data-V2-ndk.vendor
+
+# Weaver
+PRODUCT_PACKAGES += \
+android.hardware.weaver@1.0 \
+android.hardware.weaver@1.0.vendor
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/e3q/e3q-vendor.mk)

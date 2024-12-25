@@ -73,7 +73,8 @@ lib_fixups: lib_fixups_user_type = {
         "android.hardware.thermal@2.0",
         "android.hardware.weaver-V2-ndk",
         "android.hardware.weaver-V1-ndk",
-
+        "vendor.samsung.hardware.keymint-V3-ndk",
+        "libcppbor_external"
     ): lib_fixup_vendor_suffix,
     (
         'libagmclient',
@@ -98,11 +99,7 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-<<<<<<< Updated upstream
     check_elf=False
-=======
-    check_elf=False,
->>>>>>> Stashed changes
 )
 
 if __name__ == '__main__':
